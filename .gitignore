@@ -1,0 +1,6 @@
+*.pem
+*.crx
+*.zip
+__pycache__/
+node_modules/
+.workbuddy/
