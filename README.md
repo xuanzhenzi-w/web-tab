@@ -23,6 +23,17 @@ A free, ad-free, privacy-focused Chrome extension that brings order to your mess
 - **多语言**：中文（默认）、English、日本語、한국어，设置内随时切换，界面实时刷新。
   - *Multilingual*: Chinese (default), English, 日本語, 한국어 — switch anytime in settings; the UI updates live.
 
+## 🖼 商店素材 / Store Assets
+
+宣传图存放于 [`promo/`](promo/) 目录，可直接用于 Chrome 网上应用店的商品详情页：
+
+| 尺寸 Size | 用途 Purpose | 文件 File |
+|---|---|---|
+| 1400×560 | 商店横幅 Marquee | `promo/promo-marquee-1400x560.png` |
+| 440×280 | 商店小图 Small tile | `promo/promo-small-440x280.png` |
+
+![标签管家商店横幅 / Tab Manager marquee](promo/promo-marquee-1400x560.png)
+
 ## 📥 安装 / Installation
 
 - **Chrome 网上应用店（推荐）**：[点击安装](https://chromewebstore.google.com/detail/%E6%A0%87%E7%AD%BE%E7%AE%A1%E5%AE%B6-tab-manager/ajkeahkmholfkmbfnjenpdaojnhemhii)

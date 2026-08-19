@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>隐私权政策 — 标签管家 Tab Manager</title>
+<style>
+  body { font-family: -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif; max-width:720px; margin:40px auto; padding:0 20px; color:#333; line-height:1.8 }
+  h1 { color:#4f46e5; border-bottom:2px solid #eef0ff; padding-bottom:12px }
+  h2 { margin-top:32px; color:#16181d }
+  table { width:100%; border-collapse:collapse; margin:16px 0 }
+  th,td { text-align:left; padding:10px 14px; border:1px solid #ebedf2 }
+  th { background:#f6f7f9; font-weight:600 }
+  .last-updated { color:#888; font-size:14px; margin-bottom:24px }
+</style>
+</head>
+<body>
+
+<h1>隐私权政策</h1>
+<p class="last-updated">最后更新：2025 年 8 月 16 日</p>
+
+<p>本隐私权政策说明<strong>标签管家 Tab Manager</strong>（以下简称「本扩展」）如何收集、使用和保护您的数据。安装或使用本扩展即表示您同意本政策。</p>
+
+<h2>一、我们收集哪些数据</h2>
+<p>本扩展仅在您的本地浏览器内处理以下数据，<strong>不会传输至任何远程服务器</strong>：</p>
+<table>
+<tr><th>数据类型</th><th>用途</th><th>存储位置</th></tr>
+<tr><td>标签页 URL</td><td>去重检测（判断相同链接是否已打开）、归档记录（关闭后可恢复）</td><td>chrome.storage.local（本地）</td></tr>
+<tr><td>标签页标题</td><td>归档记录展示与搜索</td><td>chrome.storage.local（本地）</td></tr>
+<tr><td>标签页图标（favicon URL）</td><td>归档列表中的视觉标识</td><td>chrome.storage.local（本地）</td></tr>
+<tr><td>用户设置偏好</td><td>去重开关、自动归档开关、闲置时长阈值、固定标签保护策略、界面语言选择</td><td>chrome.storage.local（本地）</td></tr>
+<tr><td>标签最后访问时间</td><td>自动归档功能判定标签是否超时闲置</td><td>chrome.storage.session（本地，会话级）</td></tr>
+</table>
+
+<h2>二、数据如何使用</h2>
+<ul>
+<li><strong>同链接去重</strong>：读取当前所有标签的 URL，与新打开的 URL 比对。若发现完全相同的链接，切换到已有标签而非新建。</li>
+<li><strong>同域名合并群组</strong>：读取标签 URL 的域名部分，将同一窗口内同域名的标签收进同一标签群组并设置标题和颜色。</li>
+<li><strong>自动归档</strong>：每分钟巡检一次所有标签的最后访问时间，超过用户设定时长未访问的非激活标签将被关闭，其元数据（URL、标题、图标、时间）存入归档列表。</li>
+<li><strong>手动归档</strong>：用户主动触发时，记录所有窗口中所有标签的元数据后关闭。</li>
+<li><strong>归档恢复/删除</td>：用户可在归档页面查看历史记录，选择重新打开原始 URL 或删除记录。</li>
+</ul>
+
+<h2>三、数据共享与传输</h2>
+<p><strong>本扩展不会将任何用户数据发送至第三方服务器、云端服务或任何外部方。</strong> 所有数据处理均在您的浏览器本地完成。</p>
+<p>本扩展：</p>
+<ul>
+<li>❌ 不包含任何网络请求代码（无 fetch、XMLHttpRequest、WebSocket）</li>
+<li>❌ 不使用任何分析工具或追踪 SDK</li>
+<li>❌ 不嵌入任何第三方脚本或广告</li>
+<li>❌ 不连接任何远程服务器</li>
+</ul>
+
+<h2>四、数据存储与安全</h2>
+<p>所有数据通过 Chrome 扩展 API <code>chrome.storage.local</code> 和 <code>chrome.storage.session</code> 存储在您的设备本地。这些数据：</p>
+<ul>
+<li>随您的 Chrome 用户配置文件同步（如果您开启了 Chrome 同步功能）</li>
+<li>卸载扩展后可通过 Chrome 设置清除残留数据</li>
+<li>不会被本扩展的开发者或其他任何方访问</li>
+</ul>
+
+<h2>五、用户权利</h4>
+<ul>
+<li><strong>导出/清除数据</strong>：您可以在扩展的选项页面重置所有设置，或在归档页面清空所有归档记录。</li>
+<li><strong>卸载</strong>：通过 Chrome 扩展管理页面 (<code>chrome://extensions/</code>) 卸载本扩展即可停止所有数据处理。</li>
+<li><strong>Chrome 数据控制</strong>：您可以通过 Chrome 设置 → 隐私和安全 → 网站设置 → 查看权和站点数据来管理和清除扩展存储的数据。</li>
+</ul>
+
+<h2>六、未成年人使用</h2>
+<p>本扩展不针对未成年人设计，也不故意收集未成年人的个人信息。</p>
+
+<h2>七、政策更新</h2>
+<p>我们可能不时更新本隐私权政策。如有重大变更，我们会通过扩展商店页面发布通知。建议您定期查阅本页面。</p>
+
+<h2>八、联系我们</h2>
+<p>如您对本隐私权政策有任何疑问，请通过 Chrome Web Store 本扩展的「联系开发者」渠道与我们联系。</p>
+
+<hr style="margin-top:40px;border:none;border-top:1px solid #ebedf2">
+<p style="color:#888;font-size:13px">本政策以中文编写，如与其他语言版本存在差异，以中文版为准。</p>
+
+</body>
+</html>
