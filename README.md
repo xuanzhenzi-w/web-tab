@@ -6,6 +6,8 @@ A free, ad-free, privacy-focused Chrome extension that brings order to your mess
 > 完全免费 · 无广告 · 不收集任何用户数据
 > Free · Ad-free · No personal data collected
 
+![标签管家 Tab Manager](promo/promo-marquee-1400x560.png)
+
 ## ✨ 功能特性 / Features
 
 - **同链接去重**：再打开一个已经开着的网址时，自动跳到已有的标签，而不是叠出新标签。可在设置中选择「仅当前窗口」或「所有窗口」查找重复；还能用允许列表放行特定网址（如网银、邮箱等需要多开的后台页）。
@@ -22,17 +24,6 @@ A free, ad-free, privacy-focused Chrome extension that brings order to your mess
   - *Most-visited panel*: The archive page surfaces your most frequently archived URLs at the top, so you can reopen common links in one click.
 - **多语言**：中文（默认）、English、日本語、한국어，设置内随时切换，界面实时刷新。
   - *Multilingual*: Chinese (default), English, 日本語, 한국어 — switch anytime in settings; the UI updates live.
-
-## 🖼 商店素材 / Store Assets
-
-宣传图存放于 [`promo/`](promo/) 目录，可直接用于 Chrome 网上应用店的商品详情页：
-
-| 尺寸 Size | 用途 Purpose | 文件 File |
-|---|---|---|
-| 1400×560 | 商店横幅 Marquee | `promo/promo-marquee-1400x560.png` |
-| 440×280 | 商店小图 Small tile | `promo/promo-small-440x280.png` |
-
-![标签管家商店横幅 / Tab Manager marquee](promo/promo-marquee-1400x560.png)
 
 ## 📥 安装 / Installation
 
