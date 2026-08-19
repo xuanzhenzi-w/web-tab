@@ -7,3 +7,11 @@ node_modules/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# 项目辅助文件（不纳入版本库 / not tracked）
+Agents.md
+tab-manager-intro.md
+tools/
+标签管家_小红书运营策略.md
+标签管家_宣传文案.md
+标签管家_捐赠功能调研与方案.md
