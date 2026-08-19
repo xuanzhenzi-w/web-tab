@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="header">
+    <div class="title" data-i18n="appName">标签管家</div>
+    <div class="sub" id="count">加载中…</div>
+  </div>
+
+  <div class="toolbar">
+    <div class="toolbar-row primary">
+      <button id="mergeBtn" class="btn btn-ghost">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="4" y="5" width="6" height="6" rx="1.2"/>
+          <rect x="14" y="5" width="6" height="6" rx="1.2"/>
+          <rect x="9" y="14" width="6" height="6" rx="1.2"/>
+          <path d="M7 11 12 14M17 11 12 14"/>
+        </svg>
+        <span class="btn-label" data-i18n="btn_merge">合并同域名</span>
+      </button>
+      <button id="archiveWinBtn" class="btn btn-ghost">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="5" y="5" width="14" height="12" rx="1.6"/>
+          <path d="M5 9.5h14"/>
+          <circle cx="7.6" cy="7.2" r="0.7"/>
+          <path d="M12 17v3.5M9.8 18.5 12 21l2.2-2.5"/>
+        </svg>
+        <span class="btn-label" data-i18n="btn_archive_win">归档本窗口</span>
+      </button>
+      <button id="archiveAllBtn" class="btn btn-ghost">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="4" y="5" width="11" height="9" rx="1.4"/>
+          <rect x="9.5" y="9.5" width="11" height="9" rx="1.4"/>
+          <path d="M14.8 18.5v3M12.6 20 14.8 22.2 17 20"/>
+        </svg>
+        <span class="btn-label" data-i18n="btn_archive_all">归档全部窗口</span>
+      </button>
+    </div>
+    <div class="toolbar-row secondary">
+      <button id="ungroupBtn" class="btn btn-ghost">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="3" y="6" width="11" height="12" rx="2" stroke-dasharray="2.2 2"/>
+          <rect x="5.5" y="10" width="5" height="5" rx="1"/>
+          <rect x="16" y="10" width="5" height="5" rx="1"/>
+          <path d="M10.5 12.5h5.5M14.6 11 16.5 12.5 14.6 14"/>
+        </svg>
+        <span class="btn-label" data-i18n="btn_ungroup">解组</span>
+      </button>
+      <button id="archiveBtn" class="btn btn-ghost">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="5" y="4" width="14" height="16" rx="2"/>
+          <path d="M8 9h8M8 13h8M8 17h5"/>
+          <circle cx="17" cy="6.5" r="2.3"/>
+          <path d="M17 5.2v1.4M17 6.6h1.1"/>
+        </svg>
+        <span class="btn-label" data-i18n="btn_archive">归档记录</span>
+      </button>
+      <button id="optionsBtn" class="btn btn-ghost">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 4v2.4M12 17.6V20M4 12h2.4M17.6 12H20M6.3 6.3l1.7 1.7M16 16l1.7 1.7M17.7 6.3 16 8M8 16l-1.7 1.7"/>
+          <circle cx="12" cy="12" r="1"/>
+        </svg>
+        <span class="btn-label" data-i18n="btn_options">设置</span>
+      </button>
+    </div>
+  </div>
+
+  <ul id="tabList" class="tab-list"></ul>
+
+  <div class="donate-bar">
+    <span class="donate-prompt" data-i18n="donate_prompt">喜欢标签管家？</span>
+    <span class="donate-link" id="afdianLink" data-i18n="support_afdian">爱发电</span>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="i18n.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

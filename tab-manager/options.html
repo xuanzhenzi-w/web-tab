@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="top-card">
+      <div class="header">
+        <div class="title" data-i18n="opt_title">标签管家 · 设置</div>
+        <div class="header-right">
+          <button id="openArchiveBtn" data-i18n="btn_archive" data-i18n-title="btn_archive_title">归档记录</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="card">
+      <div class="card-head">
+        <div class="card-title" data-i18n="sec_dedupe">打开相同链接</div>
+      </div>
+      <div class="card-body">
+        <label class="row">
+          <input type="checkbox" id="dedupeEnabled" />
+          <span data-i18n-html="opt_dedupe_desc"></span>
+        </label>
+        <label class="row inline">
+          <span data-i18n="opt_dedupe_scope_label">查找范围</span>
+          <select id="dedupeScope">
+            <option value="current" data-i18n="opt_dedupe_scope_current">仅当前窗口</option>
+            <option value="all" data-i18n="opt_dedupe_scope_all">所有窗口</option>
+          </select>
+        </label>
+        <div class="row col">
+          <label class="row-label" data-i18n="opt_allowlist_label">不切换允许列表</label>
+          <span class="row-hint" data-i18n-html="opt_allowlist_desc"></span>
+          <div class="al-add">
+            <input type="text" id="allowlistInput" data-i18n-ph="opt_allowlist_ph" placeholder="example.com 或 https://docs.example.com/edit" />
+            <button type="button" id="allowlistAdd" class="btn-ghost" data-i18n="opt_allowlist_add">新增</button>
+          </div>
+          <ul id="allowlistList" class="al-list"></ul>
+          <p id="allowlistEmpty" class="al-empty" data-i18n="opt_allowlist_empty" hidden>暂无允许列表条目</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <div class="card-title" data-i18n="sec_autoclose">定时关闭闲置标签</div>
+      </div>
+      <div class="card-body">
+        <label class="row">
+          <input type="checkbox" id="autoCloseEnabled" />
+          <span data-i18n-html="opt_autoclose_desc"></span>
+        </label>
+        <label class="row inline">
+          <span data-i18n="opt_autoclose_prefix">闲置超过</span>
+          <input type="number" id="autoCloseMinutes" min="1" max="10000" step="1" />
+          <span data-i18n="opt_autoclose_suffix">分钟后关闭（当前激活的标签与固定标签不会被关闭）</span>
+        </label>
+        <label class="row">
+          <input type="checkbox" id="protectPinned" />
+          <span data-i18n-html="opt_protect_desc"></span>
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <div class="card-title" data-i18n="sec_archive">归档记录页面</div>
+      </div>
+      <div class="card-body">
+        <label class="row">
+          <input type="checkbox" id="pinArchivePage" />
+          <span data-i18n-html="opt_pin_desc"></span>
+        </label>
+        <label class="row">
+          <input type="checkbox" id="deleteOnRestore" />
+          <span data-i18n-html="opt_delete_desc"></span>
+        </label>
+        <label class="row inline">
+          <span data-i18n="opt_frequent_limit_label">最常访问数量</span>
+          <input type="number" id="frequentLimit" min="1" max="30" step="1" />
+          <span data-i18n="opt_frequent_limit_suffix">个（归档页展示最常出现的网址）</span>
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <div class="card-title" data-i18n="sec_language">界面语言</div>
+      </div>
+      <div class="card-body">
+        <label class="row inline">
+          <span data-i18n="opt_language_label">界面语言</span>
+          <select id="language">
+            <option value="zh_CN">中文</option>
+            <option value="en">English</option>
+            <option value="ja">日本語</option>
+            <option value="ko">한국어</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <div class="card-title" data-i18n="sec_support">支持开发者</div>
+      </div>
+      <div class="card-body">
+        <p class="row-hint" data-i18n-html="opt_support_desc"></p>
+        <div class="support-row">
+          <button id="afdianBtn" class="support-btn" data-i18n-title="support_afdian">
+            <svg class="support-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 20s-7-4.35-7-9.5A3.5 3.5 0 0 1 12 7a3.5 3.5 0 0 1 7 3.5C19 15.65 12 20 12 20Z"/>
+            </svg>
+            <span data-i18n="support_afdian">爱发电（国内）</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <p id="status" class="status"></p>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

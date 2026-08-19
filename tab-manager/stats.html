@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="stats.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="top-card">
+      <div class="header">
+        <div class="title" data-i18n="stats_title">归档统计</div>
+        <div class="header-right">
+          <span class="sub" id="updated">加载中…</span>
+          <button id="backBtn" data-i18n="stats_back" data-i18n-title="stats_back">返回归档</button>
+          <button id="refreshBtn" data-i18n="arch_refresh" data-i18n-title="arch_refresh_title">刷新</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 概览数字卡 -->
+    <div class="overview" id="overview">
+      <div class="ov-card">
+        <div class="ov-num" id="ovRecords">0</div>
+        <div class="ov-label" data-i18n="stats_total_records">归档记录总数</div>
+      </div>
+      <div class="ov-card">
+        <div class="ov-num" id="ovDomains">0</div>
+        <div class="ov-label" data-i18n="stats_total_domains">归档域名总数</div>
+      </div>
+      <div class="ov-card">
+        <div class="ov-num" id="ovDays">0</div>
+        <div class="ov-label" data-i18n="stats_total_days">归档天数</div>
+      </div>
+    </div>
+
+    <!-- 归档来源分布 -->
+    <section class="panel">
+      <h2 class="panel-title" data-i18n="stats_by_type">归档来源分布</h2>
+      <div class="type-bar" id="typeBar">
+        <div class="type-seg seg-auto" id="segAuto"></div>
+        <div class="type-seg seg-manual" id="segManual"></div>
+      </div>
+      <div class="type-legend" id="typeLegend"></div>
+    </section>
+
+    <!-- 各域名记录数 -->
+    <section class="panel">
+      <h2 class="panel-title" data-i18n="stats_by_domain">各域名记录数</h2>
+      <div id="domainRank" class="rank-list"></div>
+    </section>
+
+    <!-- 每日归档记录数 -->
+    <section class="panel">
+      <h2 class="panel-title" data-i18n="stats_by_day">每日归档记录数</h2>
+      <div id="dayChart" class="bar-chart"></div>
+    </section>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="i18n.js"></script>
+  <script src="stats.js"></script>
+</body>
+</html>

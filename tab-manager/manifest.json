@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "标签管家 Tab Manager",
+  "version": "1.2.0",
+  "description": "管理浏览器标签：合并同域名标签、打开相同链接自动切换、定时归档长时间未访问的标签。",
+  "permissions": ["tabs", "storage", "alarms", "windows", "tabGroups"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "标签管家"
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
